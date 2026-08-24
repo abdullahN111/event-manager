@@ -1,0 +1,265 @@
+<div
+  id="eventModal"
+  class="hidden fixed inset-0 bg-black/30 flex items-start justify-center z-50 pt-8"
+>
+  <div
+    class="bg-white rounded-xl shadow-xl w-full max-w-2xl max-h-[calc(100vh-4rem)] overflow-y-auto"
+  >
+    <div
+      class="sticky top-0 z-10 flex justify-between items-center px-6 py-5 bg-white/95 backdrop-blur border-b border-gray-100"
+    >
+      <div>
+        <h2 class="text-xl font-semibold text-gray-800">Create New Event</h2>
+        <p class="text-sm text-gray-500 mt-1">
+          Enter the event and customer details below.
+        </p>
+      </div>
+
+      <button
+        type="button"
+        id="closeModalBtn"
+        class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <form id="eventForm" class="p-6 space-y-8">
+      <div class="pb-6 border-b border-gray-100">
+        <h3
+          class="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2"
+        >
+          <span class="w-1 h-5 bg-[#e91e63] rounded-full"></span>
+          Event Details
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Event Name
+            </label>
+            <input
+              type="text"
+              name="eventName"
+              id="eventName"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Status
+            </label>
+            <select
+              name="status"
+              id="status"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            >
+              <option value="Upcoming">Upcoming</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Event Date
+            </label>
+            <input
+              type="date"
+              name="eventDate"
+              id="eventDate"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Booking Date
+            </label>
+            <input
+              type="date"
+              name="bookingDate"
+              id="bookingDate"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Start Time
+            </label>
+            <input
+              type="time"
+              name="startTime"
+              id="startTime"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              End Time
+            </label>
+            <input
+              type="time"
+              name="endTime"
+              id="endTime"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-3">
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            Description
+          </label>
+          <textarea
+            type="text"
+            name="description"
+            id="description"
+            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10 resize-none"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="pb-6 border-b border-gray-100">
+        <h3
+          class="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2"
+        >
+          <span class="w-1 h-5 bg-[#e91e63] rounded-full"></span>
+          Customer Details
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Customer Name
+            </label>
+            <input
+              type="text"
+              name="customerName"
+              id="customerName"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              name="customerEmail"
+              id="customerEmail"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Phone
+            </label>
+            <input
+              type="tel"
+              name="customerPhone"
+              id="customerPhone"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-6 border-b border-gray-100">
+        <h3
+          class="text-base font-semibold text-gray-800 mb-4 flex items-center gap-2"
+        >
+          <span class="w-1 h-5 bg-[#e91e63] rounded-full"></span>
+          Financial Details
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Total Amount (Rs.)
+            </label>
+            <input
+              type="number"
+              name="requestedAmount"
+              id="requestedAmount"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Total Paid (Rs.)
+            </label>
+            <input
+              type="number"
+              name="totalPaid"
+              id="totalPaid"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Remaining Amount (Rs.)
+            </label>
+            <input
+              type="number"
+              name="confirmedAmount"
+              id="confirmedAmount"
+              class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+              readonly
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1 mt-2">
+            Booking By
+          </label>
+          <input
+            type="text"
+            name="bookingBy"
+            id="bookingBy"
+            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#e91e63] focus:ring-2 focus:ring-[#e91e63]/10"
+            required
+          />
+        </div>
+      </div>
+
+      <div
+        class="sticky bottom-0 -mx-6 -mb-6 mt-2 px-6 py-4 bg-white/95 backdrop-blur border-t border-gray-100 flex justify-end gap-3"
+      >
+        <button
+          type="button"
+          id="cancelModalBtn"
+          class="px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-200"
+        >
+          Cancel
+        </button>
+
+        <button
+          type="submit"
+          class="px-5 py-2.5 text-sm font-medium bg-[#e91e63] text-white rounded-lg hover:bg-[#d81b60] active:scale-95 transition-all duration-200 shadow-sm"
+        >
+          Create Event
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

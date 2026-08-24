@@ -1,0 +1,103 @@
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img
+          src="assets/logo.png"
+          class="w-10 h-10 rounded-full mr-2"
+          alt="Logo"
+        />
+        <span class="text-xl font-bold text-gray-800"> Events Manager </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6">
+        <a
+          id="dashboardLink"
+          href="index.html"
+          class="hover:text-[#e91e63] hover:border-b-2 hover:border-[#e91e63] pb-1 text-gray-600 cursor-pointer"
+        >
+          Dashboard
+        </a>
+
+        <a
+          id="eventsLink"
+          href="events.html"
+          class="hover:text-[#e91e63] hover:border-b-2 hover:border-[#e91e63] pb-1 text-gray-600 cursor-pointer"
+        >
+          Events
+        </a>
+      </nav>
+
+      <div class="flex items-center">
+        <button
+          class="newEventBtn hidden md:flex items-center bg-[#e91e63] text-white py-2 px-4 rounded-md mr-4 hover:bg-[#d81b60] transition-colors cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+
+          New Event
+        </button>
+
+        <div class="relative">
+          <button
+            id="profileBtn"
+            class="flex items-center focus:outline-none cursor-pointer"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center"
+            >
+              <span id="profileLetter" class="text-gray-700 font-medium"
+                >A</span
+              >
+            </div>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 ml-1 text-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div
+            id="profileMenu"
+            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200"
+          >
+            <div class="px-4 py-2 border-b border-gray-100">
+              <p id="userName" class="text-sm font-medium text-gray-800"></p>
+
+              <p id="userEmail" class="text-xs text-gray-500"></p>
+            </div>
+
+            <button
+              id="logoutBtn"
+              class="w-full text-left block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
