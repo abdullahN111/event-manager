@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS events (
     requestedAmount DECIMAL(10,2) NOT NULL,
     totalPaid DECIMAL(10,2) NOT NULL,
     confirmedAmount DECIMAL(10,2) NOT NULL,
+    bookingBy VARCHAR(255) NOT NULL
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 ");
