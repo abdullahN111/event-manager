@@ -1,0 +1,83 @@
+<header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex flex-wrap justify-between items-center gap-3">
+      <!-- Logo & Hall Title -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <img
+          src="assets/logo.png"
+          class="w-10 h-10 rounded-full object-cover border border-gray-200 shadow-sm"
+          alt="Logo"
+          data-hall-logo
+        />
+        <div>
+          <span
+            class="text-xl font-bold text-gray-800 block leading-tight"
+            data-hall-name
+          >
+            Events Manager
+          </span>
+          <span class="text-xs text-gray-500 block" data-hall-subtitle>
+            Hall Booking &amp; Management
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="flex items-center space-x-6">
+        <a
+          id="dashboardLink"
+          href="index.html"
+          class="hover-text-theme hover-border-theme pb-1 text-gray-600 text-sm md:text-base transition-colors cursor-pointer"
+        >
+          Dashboard
+        </a>
+
+        <a
+          id="eventsLink"
+          href="events.html"
+          class="hover-text-theme hover-border-theme pb-1 text-gray-600 text-sm md:text-base transition-colors cursor-pointer"
+        >
+          All Events
+        </a>
+      </nav>
+
+      <!-- Quick Action & Admin Indicator -->
+      <div class="flex items-center gap-3">
+        <button
+          type="button"
+          class="newEventBtn hidden sm:flex items-center btn-theme py-2 px-4 rounded-lg text-sm font-medium shadow-sm cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-1.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+          New Event
+        </button>
+
+        <div
+          class="flex items-center gap-2 pl-2 border-l border-gray-200"
+          title="Local Administrator Mode"
+        >
+          <div
+            class="w-9 h-9 rounded-full badge-theme flex items-center justify-center font-semibold text-sm"
+          >
+            A
+          </div>
+          <span class="hidden lg:inline text-sm font-medium text-gray-700">
+            Admin
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

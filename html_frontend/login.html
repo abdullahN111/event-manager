@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/theme.css" />
+    <title>Welcome – Events Manager</title>
+  </head>
+
+  <body class="bg-gray-50 select-none overflow-hidden">
+    <div class="flex h-screen">
+      <!-- Left Banquet Image -->
+      <div class="hidden md:block md:w-1/2 relative">
+        <img
+          src="assets/banquet.png"
+          alt="Banquet Hall"
+          class="object-cover w-full h-full"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent flex items-end p-10"
+        >
+          <div class="text-white">
+            <p class="text-sm uppercase tracking-widest opacity-85 font-medium">
+              Banquet &amp; Marriage Hall System
+            </p>
+            <h2 class="text-2xl font-bold mt-1">
+              Simple, Reliable Booking &amp; Schedule Management
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Welcome Portal -->
+      <div
+        class="flex flex-col justify-center items-center w-full md:w-1/2 px-8 bg-theme-gradient"
+      >
+        <div
+          class="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center"
+        >
+          <div class="flex justify-center mb-5">
+            <img
+              src="assets/logo.png"
+              alt="Hall Logo"
+              class="w-20 h-20 rounded-full object-cover border-2 border-theme shadow-md"
+              data-hall-logo
+            />
+          </div>
+
+          <h1
+            class="text-3xl font-bold text-gray-800 tracking-tight"
+            data-hall-name
+          >
+            Events Manager
+          </h1>
+          <p class="text-gray-500 mt-1 text-sm font-medium" data-hall-subtitle>
+            Administrator Portal
+          </p>
+
+          <div class="mt-8 mb-6">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-theme text-xs font-semibold mb-4"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-theme animate-ping inline-block"
+              ></span>
+              Welcome, Administrator
+            </div>
+
+            <p class="text-gray-600 text-sm mb-4">
+              Opening your marriage hall dashboard...
+            </p>
+
+            <!-- 2-Second Progress Bar -->
+            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+              <div class="h-full splash-progress-bar rounded-full"></div>
+            </div>
+          </div>
+
+          <a
+            id="enterNowLink"
+            href="index.html"
+            class="inline-block text-xs text-gray-400 hover-text-theme transition-colors"
+          >
+            Click here if not redirected automatically &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

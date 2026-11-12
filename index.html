@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opening Events Manager...</title>
+    <script>
+      (function () {
+        if (window.location.protocol === "file:") {
+          var path = window.location.pathname.replace(/\\/g, "/");
+          var idx = path.toLowerCase().indexOf("/htdocs/");
+          if (idx !== -1) {
+            var dir = path.substring(idx + 8, path.lastIndexOf("/"));
+            window.location.replace(
+              "http://localhost/" + dir + "/html_frontend/index.html"
+            );
+            return;
+          }
+          window.location.replace(
+            "http://localhost/event_manager/html_frontend/index.html"
+          );
+        } else {
+          window.location.replace("html_frontend/index.html");
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

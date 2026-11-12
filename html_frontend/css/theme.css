@@ -1,0 +1,145 @@
+/* ==========================================================================
+   MARRIAGE HALL THEME & BRANDING CONFIGURATION
+   ==========================================================================
+   To customize the colors for a different Marriage Hall / Banquet:
+   Simply change `--primary` and `--primary-hover` below!
+   All buttons, calendar highlights, active tabs, form focus rings, badges,
+   and backgrounds across the entire project will update automatically.
+
+   READY-TO-USE PRESETS (Uncomment or copy any preset into :root):
+   
+   1. Default Rose Pink:
+      --primary: #e91e63;
+      --primary-hover: #d81b60;
+
+   2. Royal Maroon (Classic Karachi Banquet):
+      --primary: #881337;
+      --primary-hover: #6b0f2b;
+
+   3. Emerald Green & Gold:
+      --primary: #047857;
+      --primary-hover: #065f46;
+
+   4. Royal Navy Blue:
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+
+   5. Imperial Gold / Bronze:
+      --primary: #b45309;
+      --primary-hover: #92400e;
+   ========================================================================== */
+
+:root {
+  /* ---> CHANGE MAIN HALL COLORS HERE <--- */
+  --primary: #e91e63;
+  --primary-hover: #d81b60;
+
+  /* Automatically generated matching shades from --primary */
+  --primary-light: color-mix(in srgb, var(--primary) 12%, white);
+  --primary-soft: color-mix(in srgb, var(--primary) 5%, white);
+  --primary-border: color-mix(in srgb, var(--primary) 25%, white);
+  --primary-ring: color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* ==========================================================================
+   THEME UTILITY CLASSES (Used across all HTML & JS components)
+   ========================================================================== */
+
+/* Backgrounds */
+.bg-theme {
+  background-color: var(--primary) !important;
+}
+
+.hover-bg-theme:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.bg-theme-light {
+  background-color: var(--primary-light) !important;
+}
+
+.bg-theme-soft {
+  background-color: var(--primary-soft) !important;
+}
+
+.bg-theme-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary-soft) 0%,
+    #ffffff 50%,
+    var(--primary-light) 100%
+  ) !important;
+}
+
+/* Text Colors */
+.text-theme {
+  color: var(--primary) !important;
+}
+
+.hover-text-theme:hover {
+  color: var(--primary) !important;
+}
+
+/* Borders */
+.border-theme {
+  border-color: var(--primary) !important;
+}
+
+.border-theme-light {
+  border-color: var(--primary-border) !important;
+}
+
+.hover-border-theme:hover {
+  border-color: var(--primary) !important;
+}
+
+/* Buttons */
+.btn-theme {
+  background-color: var(--primary);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.btn-theme:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-theme:active {
+  transform: scale(0.98);
+}
+
+/* Form Inputs & Selects */
+.input-theme:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px var(--primary-ring) !important;
+  outline: none !important;
+}
+
+/* Badges & Pills */
+.badge-theme {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Navigation Active Link */
+.nav-link-active {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary) !important;
+  font-weight: 600;
+}
+
+/* Splash Screen Progress Animation */
+@keyframes progressFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.splash-progress-bar {
+  background-color: var(--primary);
+  animation: progressFill 2s ease-in-out forwards;
+}
+
